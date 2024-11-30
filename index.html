@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fluorine: The Reactive Element</title>
+  <style>
+    /* General page styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to bottom, #1b1b1b, #101010);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Main title styling */
+    h1 {
+      color: #00b3b3;
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* 3D model viewer container */
+    .viewer-container {
+      margin: 30px auto;
+      max-width: 900px;
+      padding: 20px;
+      background-color: #181818;
+      border-radius: 12px;
+      border: 3px solid #00b3b3;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+    }
+
+    model-viewer {
+      width: 100%;
+      height: 450px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+    }
+
+    /* Description section */
+    .description {
+      margin-top: 25px;
+      padding: 25px;
+      background-color: #222222;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+      display: none; /* Hide description initially */
+    }
+
+    .description h2 {
+      color: #00b3b3;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+      text-transform: uppercase;
+    }
+
+    .description p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    .description ul {
+      list-style-type: square;
+      padding-left: 20px;
+      text-align: left;
+    }
+
+    .description ul li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+    }
+
+    /* Learn more button */
+    .btn-learn-more {
+      background-color: #00b3b3;
+      color: black;
+      font-size: 1.2em;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-learn-more:hover {
+      background-color: #00cccc;
+      transform: scale(1.05);
+    }
+
+    /* Footer styles */
+    footer {
+      margin-top: 40px;
+      font-size: 1em;
+      color: #aaaaaa;
+    }
+  </style>
+  <script>
+    // JavaScript to toggle the description visibility when clicking "Learn More" button
+    function toggleDescription() {
+      var description = document.getElementById("fluorine-description");
+      if (description.style.display === "none" || description.style.display === "") {
+        description.style.display = "block";
+      } else {
+        description.style.display = "none";
+      }
+    }
+  </script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+  <h1>Fluorine: The Reactive Element</h1>
+
+  <div class="viewer-container">
+    <model-viewer src="/Fluorine atom.glb" alt="3D model of Fluorine atom" 
+      ar
+      camera-controls
+      auto-rotate>
+    </model-viewer>
+  </div>
+
+  <button class="btn-learn-more" onclick="toggleDescription()">Learn More</button>
+
+  <div id="fluorine-description" class="description">
+    <h2>About Fluorine</h2>
+    <p>
+      Fluorine is a highly reactive, pale yellow gas and the lightest halogen with the symbol **F** and atomic number **9**. It is known for its exceptional reactivity and ability to form compounds with almost all other elements.
+    </p>
+    <p>
+      Fluorine plays a critical role in various industries, from healthcare to high-tech manufacturing, and is considered one of the most fascinating elements due to its chemical properties.
+    </p>
+
+    <h2>Key Characteristics of Fluorine:</h2>
+    <ul>
+      <li><strong>Atomic Number:</strong> 9</li>
+      <li><strong>Atomic Mass:</strong> 18.998 u</li>
+      <li><strong>State at Room Temperature:</strong> Gas</li>
+      <li><strong>Color:</strong> Pale yellow</li>
+      <li><strong>Reactivity:</strong> Highly reactive, forming compounds like hydrofluoric acid and fluorides.</li>
+    </ul>
+
+    <h2>Applications of Fluorine:</h2>
+    <ul>
+      <li>Used in the production of <strong>refrigerants</strong> (e.g., Freon).</li>
+      <li>Key component in <strong>Teflon</strong>, a non-stick coating for cookware.</li>
+      <li>Plays a role in <strong>nuclear fuel processing</strong> as part of uranium hexafluoride.</li>
+      <li>Used in dental care products like <strong>toothpaste</strong> for preventing cavities.</li>
+      <li>Essential in the manufacturing of <strong>high-performance polymers</strong> and electronics.</li>
+    </ul>
+  </div>
+
+  <footer>
+    © 2024 Fluorine Atom Viewer made by ahmed mohamed  - Created with love for chemistry and technology.
+  </footer>
+</body>
+</html>
